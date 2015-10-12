@@ -1,0 +1,12 @@
+* Za kaj se uporabljajo naslednji frameworki: CloudKit, CoreTelephony, HomeKit, PassKit?
+    CloudKit - za delo z iCloud
+    CoreTelephony - za delo povezano s telefonijo (klici, operater)
+    HomeKit - home automation
+    PassKit - za delo z gesli Passbook/Wallet
+
+* Kakšna je razlika med Simulator-jem in Emulatorjem?
+    Simulator prikazuje okolje kot priblizek in ne odraza koncno stanje. Hitro.
+    Emulator prikazuje okolje tako kot je in odraza pravilno koncno stanje. Pocasnejse.
+
+* Zakaj se uporabljajo animacije?
+    Za tranzicije med posameznimi deli in stanji aplikacije in dogajanji v aplikaciji.
