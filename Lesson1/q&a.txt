@@ -9,4 +9,4 @@
     Emulator prikazuje okolje tako kot je in odraza pravilno koncno stanje. Pocasnejse.
 
 * Zakaj se uporabljajo animacije?
-    Za tranzicije med posameznimi deli in stanji aplikacije in dogajanji v aplikaciji.
+    Za tranzicije med posameznimi deli in stanji aplikacije ter dogodki v aplikaciji.
