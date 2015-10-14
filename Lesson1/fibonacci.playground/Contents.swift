@@ -6,16 +6,15 @@ import UIKit
 
 // There are no valid number checks for functions input
 
-func fibonacciLoop(which: Int16) {
+func fibonacciLoop(which: Int16) -> Int {
     var f1 = 0, f2 = 1, number = 0
     for _ in 1...which {
         number = f1 + f2
         f2 = f1
         f1 = number
-        //print("\(number)");
     }
     
-    print("\(number)");
+    return number;
 }
 
 func fibonacciRecursive(which: Int16) -> Int {
@@ -26,5 +25,5 @@ func fibonacciRecursive(which: Int16) -> Int {
     return fibonacciRecursive(which - 2) + fibonacciRecursive(which - 1)
 }
 
-fibonacciLoop(10)
+print(fibonacciLoop(10))
 print(fibonacciRecursive(10))
