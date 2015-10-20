@@ -36,7 +36,7 @@ class DTTask {
     var created: NSDate
     var changed: NSDate?
     
-    init(name: String, priority: TaskPriority, state: TaskState) {
+    init(name: String, priority: DTTaskPriority, state: DTTaskState) {
         self.name = name
         self.priority = priority
         self.state = state
@@ -45,11 +45,11 @@ class DTTask {
     }
     
     convenience init(name: String) {
-        self.init(name: name, priority: TaskPriority.Medium, state: TaskState.Open)
+        self.init(name: name, priority: DTTaskPriority.Medium, state: DTTaskState.Open)
     }
     
-    convenience init(name: String, priority: TaskPriority) {
-        self.init(name: name, priority: priority, state: TaskState.Open)
+    convenience init(name: String, priority: DTTaskPriority) {
+        self.init(name: name, priority: priority, state: DTTaskState.Open)
     }
     
     func setDescription(description: String) {
