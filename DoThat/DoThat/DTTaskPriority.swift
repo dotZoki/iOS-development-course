@@ -8,8 +8,10 @@
 
 import Foundation
 
-enum DTTaskPriority {
-    case High
-    case Medium
-    case Low
+enum DTTaskPriority : String {
+    case High = "high"
+    case Medium = "medium"
+    case Low = "low"
+    
+    static let allValues = [High, Medium, Low]
 }
