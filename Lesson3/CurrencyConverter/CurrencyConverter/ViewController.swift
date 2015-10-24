@@ -25,7 +25,24 @@ enum CurrencyUnsuported: ErrorType {
     case InvalidPair
 }
 
-class Convereter {
+extension Double {
+    var km: Double { return self * 1_000.0 }
+    var m: Double { return self }
+    var cm: Double { return self / 100.0 }
+    var mm: Double { return self / 1_000.0 }
+    var ft: Double { return self / 3.28084 }
+    
+    func convert(fromCurrency: Currency, toCurrency: Currency) throws -> (calculatedValue: Double, toCurrency: Currency, exchangeRate: String) {
+        
+        return try Converter.instannce.convert(self, fromCurrency: fromCurrency, toCurrency: toCurrency)
+    }
+}
+
+final class Converter {
+    static let instannce = Converter()
+    
+    private init() {
+    }
     
     static let exchangeRates: [String: Double] = [
         "USD-EUR": 0.88,
@@ -33,11 +50,11 @@ class Convereter {
         "CHF-EUR": 0.92,
     ]
     
-    static func convert(value: Double, fromCurrency: Currency, toCurrency: Currency) throws -> (calculatedValue: Double, toCurrency: Currency, exchangeRate: String) {
+    func convert(value: Double, fromCurrency: Currency, toCurrency: Currency) throws -> (calculatedValue: Double, toCurrency: Currency, exchangeRate: String) {
         
-        if let exchangeRate = Convereter.exchangeRates["\(fromCurrency.type)-\(toCurrency.type)"] {
+        if let exchangeRate = Converter.exchangeRates["\(fromCurrency.type)-\(toCurrency.type)"] {
             return (value * exchangeRate, toCurrency, "\(fromCurrency.type)-\(toCurrency.type): \(exchangeRate)")
-        } else if let exchangeRate = Convereter.exchangeRates["\(toCurrency.type)-\(fromCurrency.type)"] {
+        } else if let exchangeRate = Converter.exchangeRates["\(toCurrency.type)-\(fromCurrency.type)"] {
             return (value / exchangeRate, toCurrency, "\(toCurrency.type)-\(fromCurrency.type): \(exchangeRate)")
         }
         
@@ -91,7 +108,7 @@ class ViewController: UIViewController {
             convertValue.text = String(format:"%.2f", cValue)
             
             do {
-                let conversionResult:(Double, Currency, String) = try Convereter.convert(cValue, fromCurrency: currency, toCurrency: Currency(curencyName: "EUR"))
+                let conversionResult:(Double, Currency, String) = try cValue.convert(currency, toCurrency: Currency(curencyName: "EUR"))
                 let resultValue: String = String(format:"%.2f", conversionResult.0)
                 conversionText.text = "\(convertValue.text!) \(currency.getType()) is \(resultValue) EUR"
             } catch CurrencyUnsuported.InvalidPair {

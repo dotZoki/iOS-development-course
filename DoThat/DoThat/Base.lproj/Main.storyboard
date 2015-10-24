@@ -97,6 +97,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="report" destination="EDL-Q6-HG8" id="JxS-ft-WbH"/>
                         <outlet property="taskName" destination="2nC-HI-xd0" id="h8Q-iY-EGK"/>

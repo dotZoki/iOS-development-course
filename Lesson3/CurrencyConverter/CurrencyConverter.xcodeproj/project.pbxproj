@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4756DB01BD93DBB007A1E43 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756DAF1BD93DBB007A1E43 /* Test.swift */; settings = {ASSET_TAGS = (); }; };
 		F4F14B401BD6D7C9003A3F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F14B3F1BD6D7C9003A3F50 /* AppDelegate.swift */; };
 		F4F14B421BD6D7C9003A3F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F14B411BD6D7C9003A3F50 /* ViewController.swift */; };
 		F4F14B451BD6D7C9003A3F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F14B431BD6D7C9003A3F50 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4756DAF1BD93DBB007A1E43 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F4F14B3C1BD6D7C9003A3F50 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F14B3F1BD6D7C9003A3F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F14B411BD6D7C9003A3F50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4756DAE1BD93D4F007A1E43 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F4756DAF1BD93DBB007A1E43 /* Test.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		F4F14B331BD6D7C9003A3F50 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		F4F14B3E1BD6D7C9003A3F50 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				F4756DAE1BD93D4F007A1E43 /* New Group */,
 				F4F14B3F1BD6D7C9003A3F50 /* AppDelegate.swift */,
 				F4F14B411BD6D7C9003A3F50 /* ViewController.swift */,
 				F4F14B431BD6D7C9003A3F50 /* Main.storyboard */,
@@ -136,6 +147,7 @@
 			files = (
 				F4F14B421BD6D7C9003A3F50 /* ViewController.swift in Sources */,
 				F4F14B401BD6D7C9003A3F50 /* AppDelegate.swift in Sources */,
+				F4756DB01BD93DBB007A1E43 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				F4F14B501BD6D7C9003A3F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,6 +25,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         self.taskPriority.dataSource = self
         self.taskPriority.delegate = self
+        
+        NSUserDefaults.standardUserDefaults().objectForKey("somekey")
+        
+        NSUserDefaults.standardUserDefaults().setObject(<#T##value: AnyObject?##AnyObject?#>, forKey: <#T##String#>)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     override func didReceiveMemoryWarning() {
