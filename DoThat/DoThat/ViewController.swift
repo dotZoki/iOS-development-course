@@ -13,11 +13,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var taskPriority: UIPickerView!
     @IBOutlet weak var taskName: UITextField!
     @IBOutlet weak var report: UILabel!
+    @IBOutlet weak var lastTask: UILabel!
     
     var pickerDataSource = DTTaskPriority.allValues
     
-    var taskManager = DTTaskManager()
-    
+    lazy var taskManager: DTTaskManager = {
+        if let storedTaskManager = NSUserDefaults.standardUserDefaults().objectForKey("TaskManager") {
+            return storedTaskManager as! DTTaskManager
+        } else {
+            return DTTaskManager.instance
+        }
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +32,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.taskPriority.dataSource = self
         self.taskPriority.delegate = self
         
-        NSUserDefaults.standardUserDefaults().objectForKey("somekey")
+        if let storedTaskManager = NSUserDefaults.standardUserDefaults().objectForKey("TaskManager") {
+            self.taskManager = storedTaskManager as! DTTaskManager
+        }
         
-        NSUserDefaults.standardUserDefaults().setObject(<#T##value: AnyObject?##AnyObject?#>, forKey: <#T##String#>)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        // Should I save current taskManager to user storage here?
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +58,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func saveTask(sender: UIButton) {
         let task: DTTask = DTTask(name: taskName.text!)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        
         report.text = String(taskManager.addTask(task))
+        
+        lastTask.text = task.name + " " + formatter.stringFromDate(task.created)
+        
+        NSUserDefaults.standardUserDefaults().setObject(taskManager, forKey: "TaskManager")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 }
 

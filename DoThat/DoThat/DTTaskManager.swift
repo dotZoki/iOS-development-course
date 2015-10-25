@@ -9,7 +9,14 @@
 import Foundation
 
 class DTTaskManager {
-    var tasks = [DTTask]()
+    
+    static let instance = DTTaskManager()
+    
+    private init() {
+        
+    }
+    
+    var tasks : [DTTask] = [DTTask]()
     
     func addTask(task: DTTask) -> Int {
         tasks.append(task)
@@ -17,7 +24,7 @@ class DTTaskManager {
         return tasks.count
     }
     
-    func deleteTask() {
-        
+    func deleteTask(task: DTTask) {
+        tasks = tasks.filter() { $0 !== task } // didnt test it yet
     }
 }

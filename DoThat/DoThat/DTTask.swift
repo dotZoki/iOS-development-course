@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DTTask {
+class DTTask : Equatable {
     var name: String {
         didSet {
             changed = NSDate()
@@ -55,5 +55,8 @@ class DTTask {
     func setDescription(description: String) {
         self.description = description
     }
-    
+}
+
+func ==(lhs: DTTask, rhs: DTTask) -> Bool {
+    return lhs.name == rhs.name && lhs.created == rhs.created
 }
