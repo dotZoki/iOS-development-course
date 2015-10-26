@@ -31,12 +31,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         self.taskPriority.dataSource = self
         self.taskPriority.delegate = self
-        
-        if let storedTaskManager = NSUserDefaults.standardUserDefaults().objectForKey("TaskManager") {
-            self.taskManager = storedTaskManager as! DTTaskManager
-        }
-        
-        // Should I save current taskManager to user storage here?
     }
 
     override func didReceiveMemoryWarning() {

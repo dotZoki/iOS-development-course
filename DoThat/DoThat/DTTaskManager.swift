@@ -27,4 +27,8 @@ class DTTaskManager {
     func deleteTask(task: DTTask) {
         tasks = tasks.filter() { $0 !== task } // didnt test it yet
     }
+    
+    func serialize() {
+        
+    }
 }
