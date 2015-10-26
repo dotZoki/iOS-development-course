@@ -26,11 +26,6 @@ enum CurrencyUnsuported: ErrorType {
 }
 
 extension Double {
-    var km: Double { return self * 1_000.0 }
-    var m: Double { return self }
-    var cm: Double { return self / 100.0 }
-    var mm: Double { return self / 1_000.0 }
-    var ft: Double { return self / 3.28084 }
     
     func convert(fromCurrency: Currency, toCurrency: Currency) throws -> (calculatedValue: Double, toCurrency: Currency, exchangeRate: String) {
         
