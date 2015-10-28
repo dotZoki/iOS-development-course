@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Currency {
     
@@ -116,6 +117,9 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    @IBAction func selectCurrency(sender: UIButton) {
+        let manager = CLLocationManager()
     }
 }
 
