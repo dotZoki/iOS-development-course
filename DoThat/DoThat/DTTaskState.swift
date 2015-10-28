@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum DTTaskState {
-    case Open
-    case Closed
-    case Rejected
+enum DTTaskState : String {
+    case Open = "open"
+    case Closed = "closed"
+    case Rejected = "rejected"
 }

@@ -17,14 +17,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var pickerDataSource = DTTaskPriority.allValues
     
-    lazy var taskManager: DTTaskManager = {
-        if let storedTaskManager = NSUserDefaults.standardUserDefaults().objectForKey("TaskManager") {
-            return storedTaskManager as! DTTaskManager
-        } else {
-            return DTTaskManager.instance
-        }
-    }()
-    
+    var taskManager: DTTaskManager = DTTaskManager.instance
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -53,6 +47,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func saveTask(sender: UIButton) {
         let task: DTTask = DTTask(name: taskName.text!)
         
+        // Formater is slow, so reuse instance!
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = .MediumStyle
@@ -61,8 +56,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         lastTask.text = task.name + " " + formatter.stringFromDate(task.created)
         
-        NSUserDefaults.standardUserDefaults().setObject(taskManager, forKey: "TaskManager")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        self.taskManager.save()
     }
 }
 
