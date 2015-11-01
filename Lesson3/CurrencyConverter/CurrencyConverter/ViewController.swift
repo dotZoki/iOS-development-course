@@ -69,7 +69,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var conversionText: UILabel!
     @IBOutlet weak var convertValue: UITextField!
     
-    var locationManager : CLLocationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print (locations.first)
+        manager.stopUpdatingLocation()
     }
     
     @IBAction func selectCurrency(sender: UIButton) {
