@@ -25,5 +25,12 @@ func fibonacciRecursive(which: Int16) -> Int {
     return fibonacciRecursive(which - 2) + fibonacciRecursive(which - 1)
 }
 
+
+func x(first: String, second: String? = nil, third:String?) {
+    print("HAHA")
+}
+
+x("HAHA", third: "HAHA")
+
 print(fibonacciLoop(10))
 print(fibonacciRecursive(10))

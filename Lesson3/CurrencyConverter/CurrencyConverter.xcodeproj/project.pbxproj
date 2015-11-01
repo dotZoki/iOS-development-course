@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4756DB01BD93DBB007A1E43 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756DAF1BD93DBB007A1E43 /* Test.swift */; settings = {ASSET_TAGS = (); }; };
+		F40F6E3A1BE2801F00B8AF95 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40F6E391BE2801F00B8AF95 /* CarManager.swift */; };
+		F4756DB01BD93DBB007A1E43 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756DAF1BD93DBB007A1E43 /* Test.swift */; };
 		F4F14B401BD6D7C9003A3F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F14B3F1BD6D7C9003A3F50 /* AppDelegate.swift */; };
 		F4F14B421BD6D7C9003A3F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F14B411BD6D7C9003A3F50 /* ViewController.swift */; };
 		F4F14B451BD6D7C9003A3F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F14B431BD6D7C9003A3F50 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F40F6E391BE2801F00B8AF95 /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		F4756DAF1BD93DBB007A1E43 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F4F14B3C1BD6D7C9003A3F50 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F14B3F1BD6D7C9003A3F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				F4756DAF1BD93DBB007A1E43 /* Test.swift */,
+				F40F6E391BE2801F00B8AF95 /* CarManager.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40F6E3A1BE2801F00B8AF95 /* CarManager.swift in Sources */,
 				F4F14B421BD6D7C9003A3F50 /* ViewController.swift in Sources */,
 				F4F14B401BD6D7C9003A3F50 /* AppDelegate.swift in Sources */,
 				F4756DB01BD93DBB007A1E43 /* Test.swift in Sources */,

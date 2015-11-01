@@ -44,6 +44,9 @@ final class Converter {
         "USD-EUR": 0.88,
         "JPY-EUR": 0.0074,
         "CHF-EUR": 0.92,
+        "EUR-EUR": 1.0,
+        "RUB-EUR": 0.014,
+        "GBP-EUR": 1.40
     ]
     
     func convert(value: Double, fromCurrency: Currency, toCurrency: Currency) throws -> (calculatedValue: Double, toCurrency: Currency, exchangeRate: String) {
@@ -59,18 +62,23 @@ final class Converter {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var currencyUsd: UIButton!
     @IBOutlet weak var currencyJpy: UIButton!
     @IBOutlet weak var conversionText: UILabel!
     @IBOutlet weak var convertValue: UITextField!
     
+    var locationManager : CLLocationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currencyUsd.selected = true
         currencyJpy.selected = false
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,8 +126,14 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print (locations.first)
+    }
+    
     @IBAction func selectCurrency(sender: UIButton) {
-        let manager = CLLocationManager()
+        print("START LOCATION UPDATE")
+        locationManager.startUpdatingLocation()
     }
 }
 

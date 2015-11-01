@@ -65,9 +65,9 @@ class DTTask : Equatable {
         self.description = description
     }
     
-    func toDictionary () -> [String : AnyObject] {
-        // zakaj ne smem nil poslat v funkcijo?
-        return ["name" : self.name, "created" : self.created, "changed" : self.changed!, "priority" : self.priority.rawValue, "state" : self.state.rawValue ]
+    func toDictionary () -> [String : AnyObject?] {
+        // zakaj ne smem nil poslat v dictionary?
+        return ["name" : self.name, "created" : self.created, "changed" : self.changed, "priority" : self.priority.rawValue, "state" : self.state.rawValue ]
     }
 }
 
