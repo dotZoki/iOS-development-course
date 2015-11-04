@@ -134,6 +134,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func selectCurrency(sender: UIButton) {
         print("START LOCATION UPDATE")
+        
+        
+        
         locationManager.startUpdatingLocation()
     }
 }
