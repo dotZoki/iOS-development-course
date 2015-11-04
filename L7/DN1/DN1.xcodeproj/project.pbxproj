@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F44192741BEA9FAB00427BE7 /* SendMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44192731BEA9FAB00427BE7 /* SendMsgViewController.swift */; };
 		F44192761BEAA00700427BE7 /* ShowMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44192751BEAA00700427BE7 /* ShowMsgViewController.swift */; };
+		F44192781BEAA95000427BE7 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44192771BEAA95000427BE7 /* SwitchViewController.swift */; };
 		F4D5E7C31BE7D94900A67D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5E7C21BE7D94900A67D88 /* AppDelegate.swift */; };
 		F4D5E7C51BE7D94900A67D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5E7C41BE7D94900A67D88 /* ViewController.swift */; };
 		F4D5E7C81BE7D94900A67D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D5E7C61BE7D94900A67D88 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		F44192731BEA9FAB00427BE7 /* SendMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMsgViewController.swift; sourceTree = "<group>"; };
 		F44192751BEAA00700427BE7 /* ShowMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMsgViewController.swift; sourceTree = "<group>"; };
+		F44192771BEAA95000427BE7 /* SwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		F4D5E7BF1BE7D94900A67D88 /* DN1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DN1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D5E7C21BE7D94900A67D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D5E7C41BE7D94900A67D88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F4D5E7CE1BE7D94900A67D88 /* Info.plist */,
 				F44192731BEA9FAB00427BE7 /* SendMsgViewController.swift */,
 				F44192751BEAA00700427BE7 /* ShowMsgViewController.swift */,
+				F44192771BEAA95000427BE7 /* SwitchViewController.swift */,
 			);
 			path = DN1;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				F4D5E7C51BE7D94900A67D88 /* ViewController.swift in Sources */,
 				F44192761BEAA00700427BE7 /* ShowMsgViewController.swift in Sources */,
+				F44192781BEAA95000427BE7 /* SwitchViewController.swift in Sources */,
 				F44192741BEA9FAB00427BE7 /* SendMsgViewController.swift in Sources */,
 				F4D5E7C31BE7D94900A67D88 /* AppDelegate.swift in Sources */,
 			);

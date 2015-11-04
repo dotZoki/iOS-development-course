@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="-1885" y="-388"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Switch View Controller-->
         <scene sceneID="JN1-Ha-M2y">
             <objects>
-                <tabBarController id="aXj-xj-I61" sceneMemberID="viewController">
+                <tabBarController id="aXj-xj-I61" customClass="SwitchViewController" customModule="DN1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="BzM-3N-1cc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

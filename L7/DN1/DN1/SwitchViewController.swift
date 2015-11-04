@@ -1,5 +1,5 @@
 //
-//  SendMsgViewController.swift
+//  SwitchViewController.swift
 //  DN1
 //
 //  Created by Zoran Lazic on 04/11/15.
@@ -8,14 +8,11 @@
 
 import UIKit
 
-class SendMsgViewController: UIViewController {
+class SwitchViewController: UITabBarController {
 
-    @IBOutlet weak var msg: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Loaded SEND MSG ctrl")
+        print("switch vc")
 
         // Do any additional setup after loading the view.
     }
@@ -25,15 +22,10 @@ class SendMsgViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func saveMsg(sender: AnyObject) {
-        
-        NSUserDefaults.standardUserDefaults().setObject(msg.text, forKey: "Messages")
-        NSUserDefaults.standardUserDefaults().synchronize()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("SEGUE")
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("SEG")
-    }
 
     /*
     // MARK: - Navigation

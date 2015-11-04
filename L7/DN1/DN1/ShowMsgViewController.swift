@@ -12,6 +12,7 @@ class ShowMsgViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("LOADED SHOW")
 
         // Do any additional setup after loading the view.
     }
