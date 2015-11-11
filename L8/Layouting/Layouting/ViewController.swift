@@ -9,17 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var weatherIcon: UIImageView!
+    @IBOutlet weak var temperature: UILabel!
+    @IBOutlet weak var location: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        UIView.animateWithDuration(2,
+            animations: {
+            self.weatherIcon.alpha = 1;
+            }, completion: { success in
+                UIView.animateWithDuration(1, delay: 0, options: [.CurveEaseIn], animations: {
+                    //                        let xpos = self.location.frame.origin.x - 20
+                    //                        self.location.frame = CGRectMake(xpos, self.location.frame.origin.y, self.location.frame.size.height, self.location.frame.size.width)
+                    }, completion: nil)
+            })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
