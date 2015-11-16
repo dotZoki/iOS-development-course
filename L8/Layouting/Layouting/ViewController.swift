@@ -17,16 +17,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(2,
             animations: {
-            self.weatherIcon.alpha = 1;
+                self.weatherIcon.alpha = 1;
             }, completion: { success in
+                print(self.weatherIcon.alpha)
                 UIView.animateWithDuration(1, delay: 0, options: [.CurveEaseIn], animations: {
                     //                        let xpos = self.location.frame.origin.x - 20
                     //                        self.location.frame = CGRectMake(xpos, self.location.frame.origin.y, self.location.frame.size.height, self.location.frame.size.width)
                     }, completion: nil)
-            })
+        })
     }
     
     override func didReceiveMemoryWarning() {
